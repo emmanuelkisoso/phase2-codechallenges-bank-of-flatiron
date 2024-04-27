@@ -1,11 +1,11 @@
-function Row({transactions}) {
-    const rows=transactions.map( (transaction, index)=>{
+function Row({dealings}) {
+    const rows=dealings.map( (dealing, index)=>{
         return(
-            <tr>
-            <td>{transaction.date}</td>
-            <td>{transaction.description}</td>
-            <td>{transaction.category}</td>
-            <td>{transaction.amount}</td>
+            <tr key={index+1}>
+            <td>{dealing.date}</td>
+            <td>{dealing.description}</td>
+            <td>{dealing.category}</td>
+            <td>{dealing.amount}</td>
         </tr>
         )
     })
