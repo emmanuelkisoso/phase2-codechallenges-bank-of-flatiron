@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import Headers from "./Headers";
 import Search from "./Search";
+import Form from "./Form";
 
 function Table() {
   // State to hold the initial dealings data
-  const [dealings] = useState([
+  const [dealings, setDealings] = useState([
     {
       date: "12/02/2024",
       description: "Paycheck from Hilton Hotel",
@@ -51,7 +52,7 @@ function Table() {
      <>
        {/* Render the Search component to allow users to search for specific dealings */}
        <Search dealings={dealings} onSearch={handleSearch} />
-
+       <Form dealings={dealings} setDealings={setDealings}/>
        {/* Render the table with the appropriate dealings data based on the search results */}
        <table className="table table-light">
          <Headers dealings={filteredDealings.length > 0 ? filteredDealings : dealings} />

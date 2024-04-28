@@ -1,7 +1,7 @@
 function Row({dealings}) {
     const rows=dealings.map( (dealing, index)=>{
         return(
-            <tr key={index+1}>
+        <tr key={index+1}>
             <td>{dealing.date}</td>
             <td>{dealing.description}</td>
             <td>{dealing.category}</td>
